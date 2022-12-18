@@ -5,19 +5,19 @@ from spy import *
 
 
 async def hi_command(update: Update, context: ContextTypes):
-    log_command(update, context)
+    await log(update, context)
     await update.message.reply_text(f'hi {update.effective_user.first_name}')
 
 async def help_command(update: Update, context: ContextTypes):
-    log_command(update, context)
+    await log(update, context)
     await update.message.reply_text(f'/hi\n/time\n/help')
 
 async def time_command(update: Update, context: ContextTypes):
-    log_command(update, context)
+    await log(update, context)
     await update.message.reply_text(f'{datetime.datetime.now().time()}')
 
 async def sum_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    log_command(update, context)
+    await log(update, context)
     msg = update.messege.text
     print(msg)
     items = msg.split() # sum 123 534543
