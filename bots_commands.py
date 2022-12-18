@@ -5,7 +5,7 @@ from spy import *
 
 
 async def hi_command(update: Update, context: ContextTypes):
-    await log(update, context)
+    await loger(update, context)
     await update.message.reply_text(f'hi {update.effective_user.first_name}')
 
 async def help_command(update: Update, context: ContextTypes):
